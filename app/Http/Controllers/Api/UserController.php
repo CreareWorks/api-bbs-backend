@@ -32,6 +32,7 @@ class UserController extends Controller
     public function index() : object
     {
         $result = $this->user_service->getUserListsMeta();
+
         return $this->response_service->successResponse($result);
     }
 
@@ -44,6 +45,7 @@ class UserController extends Controller
     public function show(int $id) : object
     {
         $result = $this->user_service->getUserMeta($id);
+        
         return $this->response_service->successResponse($result);
     }
 
